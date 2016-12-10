@@ -5,6 +5,7 @@ from django.conf import settings
 class item(models.Model):
     name = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=999,decimal_places=2)
+    preview_image_location = models.CharField(max_length=200, blank=True)
     pdf_location = models.CharField(max_length=200, blank=True)
     audio_location = models.CharField(max_length=200, blank= True)
     paperback = models.BooleanField(default=0)

@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<ul>
+<div class="item">
     {% for item in items.all %}
-        <li>
+        <div class="item-name">
             {{ item.name }}
-        </li>
-    {% endfor %}
-</ul>
+        </div>
+        <div class="item-price">
+            {{ item.price }}
+        </div>
 
-</body>
-</html>
+        <div class="item-actions">
+            <input type="button" class="add-item" value="Add To Basket" />
+        </div>
+    {% endfor %}
+</div>
